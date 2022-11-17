@@ -9,11 +9,11 @@ function MealItem({ strMeal, strMealThumb, idMeal }) {
       <Card.Body>
         <Card.Title>{strMeal}</Card.Title>
         <Button
-          variant="dark"
+          variant="secondary"
           className="btn-meal-item"
           onClick={() => navigate(`/meal/${idMeal}`)}
         >
-          Go to meal
+          Go to recipe
         </Button>
       </Card.Body>
     </Card>

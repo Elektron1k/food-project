@@ -46,5 +46,14 @@ body {
 
 .btn-meal-item {
   position: absolute;
-  bottom: 15px;
+  bottom: 10px;
+}
+
+.ul-ingredient {
+  display: block;
+  width: 50%;
+}
+
+.instructions-title {
+  margin: 20px;
 }
