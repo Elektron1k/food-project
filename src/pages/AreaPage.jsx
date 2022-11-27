@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
 import { useParams, useSearchParams } from 'react-router-dom';
-import { getFilteredCategory } from '../api';
+import { getFilteredArea } from '../api';
 import MealsList from '../components/MealsList';
 import Preloader from '../components/Preloader';
 import Search from '../components/Search';
 
-function CategoryPage() {
+function AreaPage() {
   const { name } = useParams();
   const [meals, setMeals] = useState([]);
   const [filteredMeals, setFilteredMeals] = useState([]);
@@ -22,7 +22,7 @@ function CategoryPage() {
   };
 
   useEffect(() => {
-    getFilteredCategory(name).then((data) => {
+    getFilteredArea(name).then((data) => {
       setMeals(data.meals);
 
       setFilteredMeals(
@@ -34,11 +34,10 @@ function CategoryPage() {
       );
     });
   }, [name, searchParams]);
-
   return (
     <>
       <Search cb={handleSearch} />
-      <h2>Recipes in category: {name}</h2>
+      <h2>{name}`s recipes</h2>
       <hr />
       {!filteredMeals.length ? (
         <Preloader />
@@ -49,4 +48,4 @@ function CategoryPage() {
   );
 }
 
-export default CategoryPage;
+export default AreaPage;

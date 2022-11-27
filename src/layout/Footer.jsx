@@ -1,11 +1,7 @@
 function Footer() {
   return (
-    <footer className="page-footer">
-      <div className="footer-copyright">
-        <div className="container">
-          © {new Date().getFullYear()} Copyright Text
-        </div>
-      </div>
+    <footer className="py-3 my-4 bg-dark">
+      <p className="text-center text-muted fs-4">© 2022 Company, Inc</p>
     </footer>
   );
 }
