@@ -1,11 +1,18 @@
 import { useEffect, useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { getNameAllAreas, getNameAllCategories, getRandomMeal } from '../api';
+import Search from '../components/Search';
 
 const Header = () => {
   const [categories, setCategories] = useState([]);
   const [areas, setAreas] = useState([]);
   const [randomMeal, setRandomMeal] = useState();
+
+  const navigate = useNavigate();
+
+  const handleSearch = (srt) => {
+    navigate(`/meals?s=${srt}`);
+  };
 
   useEffect(() => {
     getNameAllCategories().then((data) => setCategories(data.meals));
@@ -100,6 +107,7 @@ const Header = () => {
                 </li>
               ) : null}
             </ul>
+            <Search cb={handleSearch} />
           </div>
         </div>
       </nav>

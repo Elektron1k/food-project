@@ -4,6 +4,7 @@ import AreaPage from './pages/AreaPage';
 import CategoryPage from './pages/CategoryPage';
 import HomePage from './pages/HomePage';
 import MealPage from './pages/MealPage';
+import MealsPage from './pages/MealsPage';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
             <Route path="category/:name" element={<CategoryPage />} />
             <Route path="area/:name" element={<AreaPage />} />
             <Route path="meal/:id" element={<MealPage />} />
+            <Route path="meals" element={<MealsPage />} />
           </Route>
         </Routes>
       </div>

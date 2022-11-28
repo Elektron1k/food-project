@@ -38,7 +38,9 @@ function HomePage() {
 
   return (
     <>
-      <Search cb={handleSearch} />
+      <div className="my-4">
+        <Search cb={handleSearch} />
+      </div>
       {!filteredCatalog ? (
         <Preloader />
       ) : (

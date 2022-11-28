@@ -37,7 +37,9 @@ function CategoryPage() {
 
   return (
     <>
-      <Search cb={handleSearch} />
+      <div className="my-4">
+        <Search cb={handleSearch} />
+      </div>
       <h2>Recipes in category: {name}</h2>
       <hr />
       {!filteredMeals.length ? (

@@ -36,7 +36,9 @@ function AreaPage() {
   }, [name, searchParams]);
   return (
     <>
-      <Search cb={handleSearch} />
+      <div className="my-4">
+        <Search cb={handleSearch} />
+      </div>
       <h2>{name}`s recipes</h2>
       <hr />
       {!filteredMeals.length ? (

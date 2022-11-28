@@ -6,6 +6,12 @@ const getMealById = async (mealId) => {
   return await response.json();
 };
 
+const getMealByName = async (name) => {
+  const response = await fetch(API_URL + 'search.php?s=' + name);
+
+  return await response.json();
+};
+
 const getRandomMeal = async () => {
   const response = await fetch(API_URL + 'random.php');
 
@@ -50,4 +56,5 @@ export {
   getNameAllCategories,
   getNameAllAreas,
   getRandomMeal,
+  getMealByName,
 };
