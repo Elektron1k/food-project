@@ -8,7 +8,7 @@ import MealsPage from './pages/MealsPage';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/food-project">
       <div className="App">
         <Routes>
           <Route path="/" element={<Layout />}>
